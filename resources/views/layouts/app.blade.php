@@ -36,7 +36,7 @@
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
-                        &nbsp;
+                        <li><a href="{{ route('articles.create') }}"> <i class="glyphicon glyphicon-pencil"></i> New Article</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

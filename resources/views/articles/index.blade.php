@@ -9,10 +9,11 @@
             <div class="panel panel-default">
                 <div class="panel-heading" role="tab">
                     <h4 class="panel-title">
-                    <a role="button" data-toggle="collapse" data-parent="#articles" href="#article-{{ $article->id }}" aria-expanded="false" aria-controls="article-{{ $article->id }}" class="collapsed">
-                        {{ $article->title }}
-                    </a>
-                    <span class="badge">{{ $article->cached_comments_count }}</span>
+                        <a role="button" data-toggle="collapse" data-parent="#articles" href="#article-{{ $article->id }}" aria-expanded="false" aria-controls="article-{{ $article->id }}" class="collapsed">
+                            {{ $article->title }}
+                        </a>
+                        <span class="badge">{{ $article->cached_comments_count }}</span>
+                        <a href="{{ route('articles.edit', $article) }}"> <i class="glyphicon glyphicon-pencil"></i> Edit </a>
                     </h4>
                 </div>
                 <div id="article-{{ $article->id }}" class="panel-collapse collapse" role="tabpanel" aria-expanded="false" style="height: 0px;">
