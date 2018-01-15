@@ -14,7 +14,7 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        $articles = \App\Article::all();
+        $articles = \App\Article::with('comments')->get();
     
         return view('articles.index', compact('articles'));
     }
