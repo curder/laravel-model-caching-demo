@@ -22,3 +22,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('articles', 'ArticleController', ['except'=>'show']);
 
 
+// Route::get('articles/{id}/comments', 'CommentController@create')->name('articles.comments.create');
+Route::post('articles/{article}/comments', 'CommentController@store')->name('articles.comments.store');

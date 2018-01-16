@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Comment;
 use Illuminate\Http\Request;
+use App\Http\Requests\CommentStoreRequest;
+use App\Article;
+use Symfony\Component\HttpFoundation\Response;
 
 class CommentController extends Controller
 {
@@ -30,12 +33,17 @@ class CommentController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  CommentStoreRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CommentStoreRequest $request,Article $article)
     {
-        //
+        $comments = new \App\Comment($request->all());
+        $result = $article->comments()->save($comments);
+
+        return response([
+            'data'=> $result
+        ],Response::HTTP_OK);
     }
 
     /**

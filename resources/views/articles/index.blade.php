@@ -24,6 +24,7 @@
                     </ul>
                 </div>
                 <div class="panel-footer">
+                    <create-comment article_id="{{$article->id}}"></create-comment>
                     <a href="{{ route('articles.edit', $article) }}"> <i class="glyphicon glyphicon-pencil"></i> Edit </a>
                     <a href="{{ route('articles.destroy', $article) }}"
                         onclick="event.preventDefault();document.getElementById('article-destroy-form').submit();"
