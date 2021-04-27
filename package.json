@@ -13,9 +13,11 @@
         "axios": "^0.21",
         "bootstrap-sass": "^3.3.7",
         "cross-env": "^5.1",
+        "is-svg": "^4.2",
         "jquery": "^3.2",
         "laravel-mix": "^1.0",
         "lodash": "^4.17.4",
+        "ssri": "^8.0.1",
         "uiv": "^0.16.0",
         "vue": "^2.5.7"
     }
